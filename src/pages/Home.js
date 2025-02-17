@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
+import { Button } from 'bootstrap';
 
 export default function Home() {
     const[users, setUsers]=useState([])
@@ -22,6 +23,8 @@ export default function Home() {
       <th scope="col">Name</th>
       <th scope="col">Username</th>
       <th scope="col">Email</th>
+      <th scope="col">Action </th>
+
     </tr>
   </thead>
   <tbody>
@@ -31,7 +34,13 @@ export default function Home() {
         <td>{user.name}</td>
         <td>{user.username}</td>
         <td>{user.email}</td>
-      </tr>)) }
+        <td>
+          <button className="btn btn-primary mx-2">View</button>
+          <button className="btn btn-dark mx-2">Edit</button>
+          <button className="btn btn-danger mx-2">Delete</button>
+        </td>
+      </tr>
+    )) }
 
    
   </tbody>
