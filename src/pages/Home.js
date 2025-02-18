@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import { Button } from 'bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     const[users, setUsers]=useState([])
@@ -36,7 +37,7 @@ export default function Home() {
         <td>{user.email}</td>
         <td>
           <button className="btn btn-primary mx-2">View</button>
-          <button className="btn btn-dark mx-2">Edit</button>
+          <Link to={`/edituser/${user.id }`} className="btn btn-outline-dark mx-2">Edit</Link>
           <button className="btn btn-danger mx-2">Delete</button>
         </td>
       </tr>
