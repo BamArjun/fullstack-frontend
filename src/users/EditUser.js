@@ -33,7 +33,7 @@ export default function EditUser() {
 
     const lodeUser= async ()=>{
         const result =await axios.get(`http://localhost:8080/user/${id}`)
-        setUser(result.data)
+        setUser(result.data);
     };
 
   return (
